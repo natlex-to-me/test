@@ -16,7 +16,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.MY_TOK }}
       run: |
-        # git remote add upstream https://github.com/redrecha/test.git
+        git remote add upstream https://github.com/redrecha/test.git
         git fetch --all
         git checkout main
-        git merge origin/main
+        git merge upstream/main
