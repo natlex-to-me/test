@@ -20,4 +20,4 @@ jobs:
         git remote add upstream https://github.com/redrecha/test.git
         git fetch --all
         git merge upsteam/main
-        git push origin
+        git push origin main
