@@ -1,0 +1,22 @@
+name: Fetch
+
+on:
+  schedule:
+    - cron:  '*/30 * * * *'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Prepare and deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_TOK }}
+      run: |
+        git remote add upstream https://github.com/redrecha/test.git
+        git fetch --all
+        git checkout master
+        git merge upstream/master
