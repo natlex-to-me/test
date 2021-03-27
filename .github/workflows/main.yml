@@ -20,3 +20,4 @@ jobs:
         git fetch --all
         git checkout origin/main
         git merge upstream/main
+        git psuh
