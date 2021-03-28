@@ -19,7 +19,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.MY_TOK }}
       run: |
         # git fetch --all
-        git checkout origin/main
+        # git checkout origin/main
         git remote add upstream https://github.com/redrecha/test.git
         git fetch --all
         git merge upstream/main
