@@ -11,12 +11,14 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        ref: mian
 
     - name: Prepare and deploy
       env:
         GITHUB_TOKEN: ${{ secrets.MY_TOK }}
       run: |
-        git fetch --all
+        # git fetch --all
         git checkout origin/main
         git remote add upstream https://github.com/redrecha/test.git
         git fetch --all
