@@ -1,8 +1,6 @@
 name: Fetch
 
-on:
-  schedule:
-    - cron:  '*/30 * * * *'
+on: workflow_dispatch
 
 jobs:
   build-and-deploy:
@@ -12,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        ref: mian
+        ref: main
 
     - name: Prepare and deploy
       env:
